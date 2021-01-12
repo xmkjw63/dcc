@@ -137,14 +137,7 @@ body {
       </footer>
     </form>
 <?php
-if(isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['code'])){
-	$user=daddslashes($_POST['user']);
-	$pass=daddslashes($_POST['pass']);	
-	$code=daddslashes($_POST['code']);
-	if(!$code || strtolower($_SESSION['mulin_code'])!=strtolower($code)){
-		echo "<script>Daen_confirm('error','啊哦','验证码错误');</script>";
-		exit();
-	}
+
 	$rs=$DB->query("select * from ".constant("TABLE")."admin where user = '".$user."' or qq = '".$user."'");
 	if($res = $DB->fetch($rs)){
         if($pass == $res['pass']){
