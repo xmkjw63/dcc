@@ -117,17 +117,7 @@ body {
         <input type="password" class="form-control" name="pass" id="pass" placeholder="请输入您的密码" required >
       </div>
 
-      <div class="form-group">
-        <label for="code">验证码</label>
-        <div class="row">
-          <div class="col-xs-8">
-            <input type="text" name="code" id="code" class="form-control" placeholder="请输入验证码" required>
-          </div>
-          <div class="col-xs-4">
-            <img src="../data/code.php?r=<?php echo time();?>" class="pull-right" id="code" style="cursor: pointer;" onclick="this.src='../data/code.php?r='+Math.random();" title="点击刷新" alt="code">
-          </div>
-        </div>
-      </div>
+    
 
       <div class="form-group">
         <button class="btn btn-block btn-primary" type="submit">立即登录</button>
